@@ -1,0 +1,30 @@
+﻿.imageVerticale{
+    height: 80%;
+    width: auto;
+}
+
+.imageHorizontale{
+    height: auto;
+    width: 90%;
+}
+
+.myCard {
+    height: 400px;
+}
+
+.blocImage {
+    height: 200px;
+    vertical-align: center;
+}
+
+.card-header {
+    height: 100px;
+}
+
+.blocCaroussel {
+    height: 350px;
+}
+
+.marginFooter {
+    margin-right: 10px;
+}
