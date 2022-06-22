@@ -3,9 +3,9 @@
 
 try {
     // chaine de connection : informations sur la base de données
-    $strConnection = 'mysql:host=oliadkuxrl9xdugh.chr7pe7iynqr.eu-west-1.rds.amazonaws.com;dbname=vi64zrmqvjdyc1l8';
+    $strConnection = getenv('DATABASE_DNS');
     // nouvel objet pdo pour appliquer la connection  (chaine, username et password)
-    $pdo = new PDO($strConnection, 'id1nl7ml2e90dl2y', 'b2ipf4dyztakjtd1', [
+    $pdo = new PDO($strConnection, getenv('DATABASE_USER'), getenv('DATABASE_PASSWORD'), [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
     ]);

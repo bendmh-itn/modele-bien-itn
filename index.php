@@ -11,8 +11,6 @@ require_once 'model/imagesModele.php';
 require_once 'model/optionsModele.php';
 require_once 'config/gestionVariables.php';
 
-var_dump(getenv('APP_ENV'));
-
 ?>
 
 <!DOCTYPE html>
