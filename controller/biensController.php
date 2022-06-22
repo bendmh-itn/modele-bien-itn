@@ -65,7 +65,7 @@ if ($uri === '/index.php' || $uri === '/') {
     require_once "templates/biens/showBien.php";
 } elseif (isset($_GET['bienId']) && isset($_GET['action']) && $_GET['action'] == "modify") {
     //Partie traitement d'événements
-    if (!verifDroitDeleteAndModify($pdo, $_GET['bienId'])) {
+    if (!verifDroitDeleteAndModify($pdo)) {
         header('Location:/index.php/pageNotFound.php');
     } else {
         if (isset($_POST["btnEnvoi"])) {
@@ -195,13 +195,12 @@ function addImagesInDataBase($pdo, $bienId, $action = "imageDefault")
     }
 }
 
-function verifDroitDeleteAndModify($pdo, $bienId)
+function verifDroitDeleteAndModify($pdo)
 {
-    $biensUser = selectMesBiens($pdo);
-    foreach ($biensUser as $bienUser) {
-        if ($bienUser->bienId === $bienId) {
-            return true;
-        }
+    $bien = selectOneBien($pdo);
+    var_dump($bien);
+    if ($bien->userId === $_SESSION['user']->id) {
+        return true;
     }
     return false;
 }
