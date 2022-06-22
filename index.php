@@ -1,11 +1,17 @@
 <?php
 session_start();
+
+(new DotEnv(__DIR__ . '/.env'))->load();
+
 require_once 'config/connect.php';
 require_once 'model/usersModele.php';
 require_once 'model/biensModele.php';
 require_once 'model/imagesModele.php';
 require_once 'model/optionsModele.php';
 require_once 'config/gestionVariables.php';
+require_once 'config/loadVariable.php';
+
+var_dump(getenv('APP_ENV'));
 
 ?>
 
