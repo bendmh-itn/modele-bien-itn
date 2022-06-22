@@ -14,7 +14,7 @@ if ($uri === '/index.php' || $uri === '/') {
     $biens = selectBiensFiltres($pdo);
     $jumbotron = "Liste des biens filtrés";
     require_once "templates/biens/listBiens.php";
-} elseif ($uri === '/index.php?page=/templates/mesBiens') {
+} elseif ($uri === '/index.php?/templates/mesBiens') {
     //Partie page principale
     $biens = selectMesBiens($pdo);
     $jumbotron = "Liste de tous vos biens";

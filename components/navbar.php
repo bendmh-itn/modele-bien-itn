@@ -25,7 +25,7 @@ var_dump($_ENV);
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="/index.php">Home</a></li>
                 <?php else : ?>
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/index.php?page=/templates/mesBiens">Mes Biens</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/index.php?/templates/mesBiens">Mes Biens</a></li>
                 <?php endif ?>
                 <?php if (!isset($_SESSION['user'])) : ?>
                     <li class="nav-item"><a class="nav-link active" href="index.php?/templates/inscription.php">S'inscrire</a></li>
