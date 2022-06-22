@@ -198,7 +198,6 @@ function addImagesInDataBase($pdo, $bienId, $action = "imageDefault")
 function verifDroitDeleteAndModify($pdo)
 {
     $bien = selectOneBien($pdo);
-    var_dump($bien);
     if ($bien->userId === $_SESSION['user']->id) {
         return true;
     }
