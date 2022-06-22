@@ -28,7 +28,7 @@
                         <?php endif ?>
                         <p class="card-text mt-3"><?= $bien->taille ?>m² - <?= $bien->ville ?></p>
                         <h5 class="card-title"><?= number_format($bien->prix, 0, ',', ' '); ?>€</h5>
-                        <?php if ($uri == '/index.php?/templates/mesBiens.php') : ?>
+                        <?php if ($uri == '/index.php?/templates/mesBiens') : ?>
                             <a href="/index.php?action=modify&bienId=<?= $bien->bienId ?>"><button class="btn btn-secondary mb-2">Modifier le bien</button></a>
                             <a href="/index.php?action=delete&bienId=<?= $bien->bienId ?>"><button class="btn btn-danger mb-2">Supprimer le bien</button></a>
                         <?php else : ?>
